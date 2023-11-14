@@ -1,53 +1,63 @@
-html{
-    background-color: rgba(73, 73, 73, 0.74)
+.inline-container, .inline-block-container, .block-container, .flex-container {
+border: 1px;
+border-color: black;
+border-style: solid;
 }
 
-h1 {
-    font-family: sans-serif;
-    font-size: 7vw; 
-    color: brown 
+.inline-div{
+    display:inline;
+    background-color: black;
 }
 
-div p, div h2 {
-    font-family: 'Courier New';
-    font-size: 2em
+.inline-block-div {
+    display:inline-block;
+    background-color: red;
 }
 
-
-strong {
-    font-style: italic
+.block-div{
+    display: block;
+    background-color: green;
 }
 
-
-.seznam {
-    font-size: 3rem; 
+.flex-div {
+    display: block;
+    background-color: blue;
 }
 
-.vstup {
-    font-family: system-ui;
-    font-size: 1.5em
+.flex-container{
+    display: flex;
+    justify-content: space-evenly;
 }
 
-#jmeno {
-    background-color:
+.inline-div, .inline-block-div, .block-div, .flex-div {
+    width: 100px;
+    height: 100px;
+    text-indent: 20px;
+    text-align: center;
+    color-scheme: gray;
+    font-style:monospace;
+    font-size: 2rem;
+    transition: background-color 3s ;
+    animation-name: SizeAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:inherit;
+
 }
 
-li:hover {
-    background-color: lightgray; 
+.inline-div:hover , .inline-block-div:hover , .block-div:hover , .flex-div:hover {
+    background-color: purple;
 }
 
-table, td, th {
-    font-size: 2rem; 
-    border: 3px solid black; 
-    border-collapse: collapse; 
+@keyframes SizeAnimation {
+    0% {width: 100px;}
+    100% {width: 200px;}
 }
 
-thead {
-    background-color: darkgray; 
-    color: white; 
-}
-
-tbody {
-    background-color: white; 
-    color: darkgray; 
-}
+/* 
+     . Nakonec vytvořte animaci s Vámi zvoleným názvem,
+         která bude postupně zvedat atribut width z hodnoty 100px na hodnotu 200px.
+          Tuto animaci přiřaďte třídám inline-div, inline-block-div, block-div a flex-div a
+           zároveň nastavte aby trvala 2 sekundy, opakovala se do nekonečn
+a a při každém dokončení změnila směr. Výslednou práci uložte na GitHub. */
